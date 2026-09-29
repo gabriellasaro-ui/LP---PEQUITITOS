@@ -1,0 +1,1666 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pequetitos Design | Móveis infantis autorais de alto padrão</title>
+  <meta name="description" content="Crie um quartinho infantil único com móveis autorais de alto padrão, design atemporal, segurança e curadoria completa da Pequetitos Design. Atendimento em todo o Brasil.">
+  <meta property="og:title" content="Pequetitos Design | Quartinhos infantis com design e segurança">
+  <meta property="og:description" content="Móveis infantis autorais, papéis de parede, tapetes, colchões e enxoval para ambientes cheios de significado.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/static/img/pequetitos/hero-fallback.jpg">
+  <meta name="theme-color" content="#A4B8AE">
+  <link rel="icon" href="/static/img/pequetitos/logo.jpg" type="image/jpeg">
+  <link rel="preload" href="/static/img/pequetitos/hero-fallback.jpg" as="image">
+  <script src="/static/tracking.js"></script>
+  <style>
+    @font-face {
+      font-family: "Pequetitos Brandon";
+      src: url("/static/fonts/brandon-grot-light.woff2") format("woff2");
+      font-display: swap;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pequetitos Avenir";
+      src: url("/static/fonts/avenir-light.woff2") format("woff2");
+      font-display: swap;
+      font-weight: 400;
+    }
+
+    :root {
+      --ink: #383737;
+      --ink-soft: #5f5e5a;
+      --sage: #a4b8ae;
+      --sage-deep: #566b5b;
+      --sage-dark: #33413a;
+      --stone-dark: #5e5a55;
+      --stone-pale: #eee9e2;
+      --mint: #cbe6d2;
+      --blush: #efc2bd;
+      --honey: #d9a24d;
+      --sky: #d9ecee;
+      --cream: #f7f1e8;
+      --paper: #fffdf9;
+      --white: #ffffff;
+      --line: rgba(56, 55, 55, 0.14);
+      --shadow: 0 24px 70px rgba(56, 55, 55, 0.12);
+      --font-display: "Pequetitos Brandon", "Trebuchet MS", Arial, sans-serif;
+      --font-body: "Pequetitos Avenir", Arial, sans-serif;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f5f1ea;
+      font-family: var(--font-body);
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.58;
+      background-image:
+        linear-gradient(rgba(56, 55, 55, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 55, 55, 0.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 82%, transparent 100%);
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 20;
+      background: rgba(255, 253, 249, 0.94);
+      border-bottom: 1px solid rgba(56, 55, 55, 0.1);
+      backdrop-filter: blur(18px);
+    }
+
+    main {
+      padding-top: 74px;
+    }
+
+    .topbar-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 4px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(86, 107, 91, 0.2);
+      object-fit: cover;
+      background: var(--white);
+    }
+
+    .brand-name {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      line-height: 1;
+      color: var(--sage-dark);
+      white-space: nowrap;
+    }
+
+    .brand-note {
+      display: block;
+      color: var(--ink-soft);
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: rgba(56, 55, 55, 0.78);
+      font-size: 0.86rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: var(--sage-deep);
+      transition: transform 180ms ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--ink);
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      white-space: nowrap;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--sage-dark);
+      color: var(--white);
+      box-shadow: 0 18px 38px rgba(51, 65, 58, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--sage-deep);
+      box-shadow: 0 22px 46px rgba(51, 65, 58, 0.26);
+    }
+
+    .btn-soft {
+      border-color: rgba(86, 107, 91, 0.22);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--sage-dark);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 74px);
+      display: flex;
+      align-items: center;
+      padding: 36px 0;
+      isolation: isolate;
+      background: #faf5ee;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 auto;
+      z-index: -1;
+      width: 38%;
+      background: var(--stone-pale);
+    }
+
+    .hero .container {
+      width: min(1260px, calc(100% - 40px));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(470px, 1.1fr);
+      align-items: center;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--sage-deep);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: var(--sage);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 660px;
+      margin-top: 22px;
+      font-family: var(--font-display);
+      font-size: 4.85rem;
+      line-height: 0.96;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    .hero-sub {
+      max-width: 570px;
+      margin-top: 24px;
+      color: var(--ink-soft);
+      font-size: 1.18rem;
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: clamp(590px, 70vh, 735px);
+    }
+
+    .photo-stage {
+      position: absolute;
+      inset: 0 0 0 38px;
+      overflow: hidden;
+      border-radius: 42% 42% 8px 8px;
+      background: var(--mint);
+      box-shadow: var(--shadow);
+    }
+
+    .photo-stage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 54% center;
+    }
+
+    .photo-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 54%, rgba(51, 65, 58, 0.2) 100%);
+      pointer-events: none;
+    }
+
+    .mini-photo {
+      position: absolute;
+      left: 0;
+      bottom: 52px;
+      width: 214px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border: 8px solid var(--paper);
+      border-radius: 50%;
+      background: var(--white);
+      box-shadow: 0 18px 42px rgba(56, 55, 55, 0.16);
+    }
+
+    .mini-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: 22px;
+      bottom: 28px;
+      width: min(300px, 54%);
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 8px;
+      background: rgba(255, 253, 249, 0.88);
+      box-shadow: 0 18px 46px rgba(56, 55, 55, 0.13);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-badge strong {
+      display: block;
+      color: var(--sage-dark);
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-badge span {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink-soft);
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+
+    .proof-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #efe9e0;
+    }
+
+    .proof-inner {
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: center;
+      gap: 22px;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .proof-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: rgba(164, 184, 174, 0.18);
+      color: var(--sage-dark);
+    }
+
+    .proof-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .proof-text strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+
+    .proof-text span {
+      display: block;
+      margin-top: 3px;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+    }
+
+    section {
+      position: relative;
+      padding: 88px 0;
+      scroll-margin-top: 74px;
+    }
+
+    .section-kicker {
+      color: var(--sage-deep);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .section-title {
+      margin-top: 12px;
+      font-family: var(--font-display);
+      font-size: 3.1rem;
+      line-height: 1.05;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .section-lead {
+      margin-top: 16px;
+      color: var(--ink-soft);
+      font-size: 1.04rem;
+      line-height: 1.65;
+    }
+
+    .story-section {
+      background: #fffaf4;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
+      align-items: center;
+      gap: 58px;
+    }
+
+    .story-collage {
+      position: relative;
+      min-height: 590px;
+    }
+
+    .story-photo {
+      position: absolute;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 22px 58px rgba(56, 55, 55, 0.14);
+    }
+
+    .story-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-photo-main {
+      top: 9%;
+      left: 0;
+      width: 79%;
+      height: 70%;
+    }
+
+    .story-photo-top {
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 39%;
+      height: 42%;
+      border: 8px solid #fffaf4;
+    }
+
+    .story-photo-bottom {
+      right: 5%;
+      bottom: 0;
+      z-index: 3;
+      width: 48%;
+      height: 38%;
+      border: 8px solid #fffaf4;
+    }
+
+    .quiet-list {
+      display: grid;
+      gap: 14px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quiet-list li {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      align-items: start;
+      gap: 12px;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+
+    .quiet-list svg {
+      width: 30px;
+      height: 30px;
+      padding: 7px;
+      border-radius: 50%;
+      background: rgba(164, 184, 174, 0.16);
+      color: var(--sage-dark);
+    }
+
+    .solution-band {
+      background: var(--sage-dark);
+      color: var(--white);
+    }
+
+    .solution-band .section-kicker,
+    .solution-band .section-title,
+    .solution-band .section-lead {
+      color: var(--white);
+    }
+
+    .solution-band .section-lead {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .solution-grid > div:first-child {
+      padding-top: 6px;
+    }
+
+    .solution-lines {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .solution-line {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .solution-line span {
+      color: var(--mint);
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .solution-line strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.06rem;
+    }
+
+    .solution-line p {
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: 0.95fr 0.7fr;
+      grid-template-rows: 250px 250px;
+      gap: 16px;
+    }
+
+    .mosaic figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .mosaic figure:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .mosaic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.96;
+    }
+
+    .process {
+      background: #f7eee3;
+    }
+
+    .process-head {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+
+    .process-steps {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 34px;
+    }
+
+    .process-step {
+      position: relative;
+      min-height: 230px;
+      padding: 0 0 24px;
+    }
+
+    .process-step + .process-step {
+      padding-left: 0;
+    }
+
+    .process-step::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-bottom: 34px;
+      background: linear-gradient(90deg, var(--honey), rgba(56, 55, 55, 0.12));
+    }
+
+    .step-number {
+      display: block;
+      color: var(--honey);
+      font-family: var(--font-display);
+      font-size: 3.3rem;
+      line-height: 0.9;
+    }
+
+    .process-step h3 {
+      margin-top: 22px;
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .process-step p {
+      margin-top: 12px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .gallery-section {
+      background: #f7f3ed;
+    }
+
+    .gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    .gallery-head .section-lead {
+      max-width: 480px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.85fr;
+      grid-auto-rows: 220px;
+      gap: 16px;
+    }
+
+    .gallery figure {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--cream);
+    }
+
+    .gallery figure:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery figure:nth-child(4) {
+      grid-column: span 2;
+    }
+
+    .gallery figure:nth-child(6) {
+      grid-column: span 2;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+
+    .gallery figure:hover img {
+      transform: scale(1.035);
+    }
+
+    .testimonial {
+      padding: 96px 0;
+      color: var(--white);
+      background: var(--stone-dark);
+    }
+
+    .testimonial-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(390px, 1.18fr);
+      gap: 72px;
+      align-items: center;
+    }
+
+    .testimonial-photo {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 4 / 5;
+      border: 8px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 28px 64px rgba(56, 45, 43, 0.24);
+    }
+
+    .testimonial-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-copy {
+      position: relative;
+      padding: 22px 0;
+    }
+
+    .testimonial-copy::before {
+      content: "\201C";
+      position: absolute;
+      top: -46px;
+      right: 0;
+      color: rgba(255, 255, 255, 0.12);
+      font-family: Georgia, serif;
+      font-size: 11rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .testimonial .section-kicker {
+      color: #f9e7ce;
+    }
+
+    .testimonial .section-title {
+      color: var(--white);
+    }
+
+    .stars {
+      display: flex;
+      gap: 5px;
+      margin: 24px 0 20px;
+      color: #f3ca78;
+    }
+
+    .stars svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .quote {
+      font-family: var(--font-display);
+      font-size: 2.35rem;
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    .quote-name {
+      display: block;
+      margin-top: 22px;
+      color: #f9e7ce;
+      font-size: 0.95rem;
+    }
+
+    .testimonial .btn-primary {
+      color: var(--sage-dark);
+      background: var(--paper);
+      box-shadow: 0 18px 38px rgba(35, 46, 40, 0.2);
+    }
+
+    .testimonial .btn-primary:hover {
+      color: var(--white);
+      background: var(--sage-dark);
+    }
+
+    .final-cta {
+      padding: 110px 0;
+      color: var(--ink);
+      background: #f8f4ed;
+      border-top: 1px solid var(--line);
+    }
+
+    .final-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
+      align-items: center;
+      gap: 76px;
+    }
+
+    .final-copy {
+      max-width: 620px;
+    }
+
+    .final-cta .section-title {
+      color: var(--ink);
+    }
+
+    .final-cta p {
+      max-width: 620px;
+      margin-top: 18px;
+      color: var(--ink-soft);
+      font-size: 1.08rem;
+      line-height: 1.6;
+    }
+
+    .final-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 22px;
+      color: var(--sage-deep);
+      font-size: 0.86rem;
+    }
+
+    .final-note::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--honey);
+    }
+
+    .final-visual {
+      margin: 0;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      border-radius: 8px;
+      background: var(--cream);
+      box-shadow: 0 24px 64px rgba(56, 55, 55, 0.14);
+    }
+
+    .final-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer {
+      color: rgba(255, 255, 255, 0.72);
+      background: #2f3632;
+      font-size: 0.86rem;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(140px, 0.55fr) minmax(240px, 0.85fr);
+      gap: 64px;
+      padding: 64px 0 48px;
+    }
+
+    .footer-brand-block {
+      max-width: 380px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+    }
+
+    .footer-brand img {
+      width: 56px;
+      height: 56px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      object-fit: cover;
+    }
+
+    .footer-brand-copy,
+    .footer-brand strong,
+    .footer-brand-copy > span {
+      display: block;
+    }
+
+    .footer-brand strong {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .footer-brand-copy > span {
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.78rem;
+    }
+
+    .footer-brand-block p {
+      max-width: 340px;
+      margin-top: 18px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.6;
+    }
+
+    .footer-column {
+      display: grid;
+      align-content: start;
+      gap: 11px;
+    }
+
+    .footer-heading {
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+
+    .footer-column a {
+      width: fit-content;
+      color: rgba(255, 255, 255, 0.78);
+      transition: color 180ms ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--white);
+    }
+
+    .footer-contact-note {
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.48);
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 0.78rem;
+    }
+
+    .float-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: #0dc143;
+      box-shadow: 0 18px 44px rgba(13, 193, 67, 0.28);
+      transition: transform 180ms ease;
+    }
+
+    .float-whatsapp:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .float-whatsapp svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1040px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .split,
+      .solution-grid,
+      .testimonial-wrap,
+      .final-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .final-inner {
+        gap: 48px;
+      }
+
+      .footer-main {
+        grid-template-columns: minmax(0, 1fr) minmax(150px, 0.65fr);
+        gap: 42px;
+      }
+
+      .footer-column:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .hero-visual {
+        min-height: 580px;
+      }
+
+      .photo-stage {
+        left: 0;
+      }
+
+      h1 {
+        font-size: 3.6rem;
+      }
+
+      .section-title {
+        font-size: 2.55rem;
+      }
+
+      .proof-inner,
+      .process-head {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-steps,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step,
+      .process-step + .process-step {
+        min-height: auto;
+        padding: 28px 0;
+      }
+
+      .gallery figure:first-child,
+      .gallery figure:nth-child(4),
+      .gallery figure:nth-child(6) {
+        grid-row: auto;
+        grid-column: auto;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 300px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .topbar-inner {
+        min-height: 68px;
+      }
+
+      main {
+        padding-top: 68px;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-note {
+        display: none;
+      }
+
+      .topbar .btn {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 0.78rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 48px 0 56px;
+      }
+
+      .hero::after {
+        inset: 58% 0 0;
+        width: 100%;
+      }
+
+      .hero-grid {
+        gap: 34px;
+      }
+
+      h1 {
+        font-size: 2.55rem;
+        line-height: 1;
+      }
+
+      .hero-sub {
+        font-size: 1rem;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .photo-stage {
+        inset: 0;
+        border-radius: 34% 34% 8px 8px;
+      }
+
+      .mini-photo {
+        width: 142px;
+        bottom: 28px;
+      }
+
+      .hero-badge {
+        right: 10px;
+        bottom: 12px;
+        width: 58%;
+        padding: 14px;
+      }
+
+      .proof-inner {
+        grid-template-columns: 1fr;
+        padding: 22px 0;
+      }
+
+      section {
+        padding: 64px 0;
+        scroll-margin-top: 68px;
+      }
+
+      .section-title {
+        font-size: 2.08rem;
+      }
+
+      .solution-line {
+        grid-template-columns: 42px 1fr;
+      }
+
+      .mosaic {
+        grid-template-columns: 1fr;
+        grid-template-rows: 310px 210px 210px;
+      }
+
+      .mosaic figure:first-child {
+        grid-row: auto;
+      }
+
+      .story-collage {
+        min-height: 500px;
+      }
+
+      .story-photo-main {
+        width: 86%;
+        height: 66%;
+      }
+
+      .story-photo-top {
+        width: 44%;
+        height: 38%;
+      }
+
+      .story-photo-bottom {
+        right: 2%;
+        width: 55%;
+        height: 36%;
+      }
+
+      .process-head {
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+      }
+
+      .gallery-head {
+        display: block;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 270px;
+      }
+
+      .testimonial-wrap {
+        gap: 38px;
+      }
+
+      .testimonial-photo {
+        aspect-ratio: 4 / 4.6;
+      }
+
+      .quote {
+        font-size: 1.55rem;
+      }
+
+      .final-cta {
+        padding: 72px 0;
+      }
+
+      .final-inner {
+        gap: 38px;
+      }
+
+      .final-visual {
+        aspect-ratio: 4 / 3;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 48px 0 34px;
+      }
+
+      .footer-column:last-child {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        min-height: auto;
+        display: grid;
+        gap: 7px;
+        padding: 20px 0 28px;
+      }
+
+      .float-whatsapp {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar" aria-label="Navegação principal">
+      <div class="container topbar-inner">
+        <a class="brand" href="#inicio" aria-label="Pequetitos Design">
+          <img src="/static/img/pequetitos/logo.jpg" alt="Pequetitos Design">
+          <span class="brand-copy">
+            <span class="brand-name">Pequetitos Design</span>
+            <span class="brand-note">Móveis infantis autorais</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Seções da página">
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#processo">Como funciona</a>
+          <a href="#ambientes">Ambientes</a>
+        </nav>
+
+        <a class="btn btn-primary js-whatsapp" href="https://wa.me/5531997682431?text=Ol%C3%A1%2C%20vim%20pela%20landing%20page%20da%20Pequetitos%20Design%20e%20quero%20ajuda%20para%20montar%20um%20quartinho." target="_blank" rel="noopener noreferrer" data-cta="nav_whatsapp" aria-label="Falar com a Pequetitos no WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M19.1 4.9A9.8 9.8 0 0 0 3.8 16.7L2.7 21l4.4-1.1A9.8 9.8 0 0 0 21.9 11.5a9.7 9.7 0 0 0-2.8-6.6Zm-7 15a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-2.6.7.7-2.5-.2-.3a8.1 8.1 0 1 1 6.5 3.4Zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.7 2.7 4.2 3.8.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .2-1.1-.1-.1-.2-.1-.4-.2Z"></path>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Alto padrão para bebês, crianças e adolescentes</span>
+            <h1 id="hero-title">O quartinho dos seus filhos com design, segurança e alma.</h1>
+            <p class="hero-sub">A Pequetitos Design cria ambientes infantis únicos, com móveis autorais, curadoria delicada e atendimento para famílias que querem acertar em cada detalhe.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary js-whatsapp" href="https://wa.me/5531997682431?text=Ol%C3%A1%2C%20vim%20pela%20landing%20page%20da%20Pequetitos%20Design%20e%20quero%20ajuda%20para%20montar%20um%20quartinho." target="_blank" rel="noopener noreferrer" data-cta="hero_whatsapp">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M19.1 4.9A9.8 9.8 0 0 0 3.8 16.7L2.7 21l4.4-1.1A9.8 9.8 0 0 0 21.9 11.5a9.7 9.7 0 0 0-2.8-6.6Zm-7 15a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-2.6.7.7-2.5-.2-.3a8.1 8.1 0 1 1 6.5 3.4Zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.7 2.7 4.2 3.8.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .2-1.1-.1-.1-.2-.1-.4-.2Z"></path>
+                </svg>
+                Quero meu quartinho Pequetitos
+              </a>
+              <a class="btn btn-soft" href="#processo" data-cta="hero_process">Ver como funciona</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <!-- Troque apenas este src quando a foto principal final chegar. -->
+            <div class="photo-stage">
+              <img src="/static/img/pequetitos/hero-fallback.jpg" alt="Criança em cama infantil autoral da Pequetitos Design">
+            </div>
+            <div class="mini-photo" aria-hidden="true">
+              <img src="/static/img/pequetitos/mesa-cadeiras.jpg" alt="">
+            </div>
+            <div class="hero-badge">
+              <strong>Do berço à adolescência</strong>
+              <span>Peças seguras, bonitas e pensadas para acompanhar a rotina da família.</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="proof-strip" aria-label="Provas de valor">
+          <div class="container proof-inner">
+            <div class="proof-item">
+              <span class="proof-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7l8-4Z"></path><path d="m9 12 2 2 4-5"></path></svg>
+              </span>
+              <span class="proof-text"><strong>Segurança primeiro</strong><span>Móveis pensados para crianças.</span></span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"></path><path d="M6 20V9l6-5 6 5v11"></path><path d="M10 20v-6h4v6"></path></svg>
+              </span>
+              <span class="proof-text"><strong>Ambiente completo</strong><span>Móveis, papel, tapete e enxoval.</span></span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"></path><path d="M12 3c3 3 4.5 6 4.5 9S15 18 12 21c-3-3-4.5-6-4.5-9S9 6 12 3Z"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              </span>
+              <span class="proof-text"><strong>Brasil inteiro</strong><span>Atendimento nacional.</span></span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </span>
+              <span class="proof-text"><strong>Alto padrão</strong><span>Design com acabamento premium.</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="diferenciais" class="story-section" aria-labelledby="diferenciais-title">
+        <div class="container split">
+          <div class="story-collage reveal" aria-label="Ambientes e detalhes Pequetitos Design">
+            <figure class="story-photo story-photo-main">
+              <img src="/static/img/pequetitos/quartinho-planejado.jpg" alt="Quarto infantil planejado com cama, escrivaninha e decoração Pequetitos Design" loading="lazy">
+            </figure>
+            <figure class="story-photo story-photo-top">
+              <img src="/static/img/pequetitos/hero-fallback.jpg" alt="Criança aproveitando um quarto Pequetitos" loading="lazy">
+            </figure>
+            <figure class="story-photo story-photo-bottom">
+              <img src="/static/img/pequetitos/ambiente-brincar.jpg" alt="Quarto infantil completo com espaço para brincar" loading="lazy">
+            </figure>
+          </div>
+          <div class="reveal">
+            <span class="section-kicker">Mais do que mobília</span>
+            <h2 class="section-title" id="diferenciais-title">Um quarto bonito hoje. Uma memória boa por muitos anos.</h2>
+            <p class="section-lead">A Pequetitos une estética, ergonomia e curadoria para transformar a escolha do quarto em uma decisão leve. O resultado é um ambiente que conversa com a infância, com a casa e com a rotina real da família.</p>
+            <ul class="quiet-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"></path></svg>
+                <span>Móveis autorais com desenho limpo, acabamentos delicados e proporções pensadas para crianças.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"></path></svg>
+                <span>Combinação de peças, papéis de parede, tapetes, colchões e enxoval sem deixar o ambiente pesado.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"></path></svg>
+                <span>Atendimento consultivo para sair da dúvida e chegar em uma escolha segura.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="solution-band" aria-labelledby="solucao-title">
+        <div class="container solution-grid">
+          <div class="reveal">
+            <span class="section-kicker">O que a Pequetitos resolve</span>
+            <h2 class="section-title" id="solucao-title">Você não precisa montar tudo sozinha.</h2>
+            <p class="section-lead">A compra deixa de ser uma sequência de escolhas soltas e vira uma curadoria com intenção: tamanho certo, estética coerente, conforto e durabilidade.</p>
+          </div>
+
+          <div class="solution-lines reveal">
+            <div class="solution-line">
+              <span>01</span>
+              <div>
+                <strong>Móveis infantis autorais</strong>
+                <p>Camas, berços, cômodas, armários, escrivaninhas, mesinhas e peças que organizam o dia a dia.</p>
+              </div>
+            </div>
+            <div class="solution-line">
+              <span>02</span>
+              <div>
+                <strong>Camadas de decoração</strong>
+                <p>Papéis de parede, tapetes, quadros, enxoval e complementos para dar personalidade sem excesso.</p>
+              </div>
+            </div>
+            <div class="solution-line">
+              <span>03</span>
+              <div>
+                <strong>Projeto de arquitetura infantil</strong>
+                <p>Quando o quarto pede direção completa, a Pequetitos ajuda a pensar o ambiente como um todo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="processo" class="process" aria-labelledby="processo-title">
+        <div class="container">
+          <div class="process-head reveal">
+            <div>
+              <span class="section-kicker">Como funciona</span>
+              <h2 class="section-title" id="processo-title">Do desejo ao quarto pronto, sem confusão.</h2>
+            </div>
+            <p class="section-lead">O caminho é simples: entender a fase da criança, escolher o estilo, fechar as peças certas e seguir com orientação até o pedido.</p>
+          </div>
+
+          <div class="process-steps reveal">
+            <article class="process-step">
+              <span class="step-number">01</span>
+              <h3>Conversa inicial</h3>
+              <p>Você conta idade, medidas, rotina, referências e o que quer sentir ao entrar no quarto.</p>
+            </article>
+            <article class="process-step">
+              <span class="step-number">02</span>
+              <h3>Curadoria Pequetitos</h3>
+              <p>A equipe indica móveis, cores e complementos que fazem sentido para o espaço e para a família.</p>
+            </article>
+            <article class="process-step">
+              <span class="step-number">03</span>
+              <h3>Pedido orientado</h3>
+              <p>Com tudo definido, você recebe suporte para compra, entrega e próximos passos com clareza.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ambientes" class="gallery-section" aria-labelledby="ambientes-title">
+        <div class="container">
+          <div class="gallery-head reveal">
+            <div>
+              <span class="section-kicker">Ambientes e peças</span>
+              <h2 class="section-title" id="ambientes-title">Design infantil com cara de casa feliz.</h2>
+            </div>
+            <p class="section-lead">Peças leves, paleta delicada e soluções que cabem em quartos de bebê, criança e adolescente.</p>
+          </div>
+
+          <div class="gallery reveal">
+            <figure>
+              <img src="/static/img/pequetitos/detalhe-cama.jpg" alt="Detalhe de cama infantil com acabamento Pequetitos" loading="lazy">
+            </figure>
+            <figure>
+              <img src="/static/img/pequetitos/mesa-cadeiras.jpg" alt="Mesa redonda infantil com cadeiras coloridas de madeira" loading="lazy">
+            </figure>
+            <figure>
+              <img src="/static/img/pequetitos/ambiente-familia.jpg" alt="Família em um ambiente infantil Pequetitos" loading="lazy">
+            </figure>
+            <figure>
+              <img src="/static/img/pequetitos/ambiente-brincar.jpg" alt="Quarto infantil completo com duas crianças brincando" loading="lazy">
+            </figure>
+            <figure>
+              <img src="/static/img/pequetitos/bastidor-producao.jpg" alt="Bastidor de produção e cuidado com materiais Pequetitos Design" loading="lazy">
+            </figure>
+            <figure>
+              <img src="/static/img/pequetitos/familia-pequetitos.jpg" alt="Família reunida em um ambiente infantil Pequetitos" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial" aria-labelledby="depoimento-title">
+        <div class="container testimonial-wrap reveal">
+          <figure class="testimonial-photo">
+            <img src="/static/img/pequetitos/depoimento-renata.jpg" alt="Depoimento de cliente sobre cama infantil Pequetitos" loading="lazy">
+          </figure>
+          <div class="testimonial-copy">
+            <span class="section-kicker">Quem compra sente</span>
+            <h2 class="section-title" id="depoimento-title">A segurança de escolher bem.</h2>
+            <div class="stars" aria-label="Cinco estrelas">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.7 7.3.8-5.4 4.9 1.5 7.2-6.4-3.7-6.4 3.7 1.5-7.2-5.4-4.9 7.3-.8L12 2Z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.7 7.3.8-5.4 4.9 1.5 7.2-6.4-3.7-6.4 3.7 1.5-7.2-5.4-4.9 7.3-.8L12 2Z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.7 7.3.8-5.4 4.9 1.5 7.2-6.4-3.7-6.4 3.7 1.5-7.2-5.4-4.9 7.3-.8L12 2Z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.7 7.3.8-5.4 4.9 1.5 7.2-6.4-3.7-6.4 3.7 1.5-7.2-5.4-4.9 7.3-.8L12 2Z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.7 7.3.8-5.4 4.9 1.5 7.2-6.4-3.7-6.4 3.7 1.5-7.2-5.4-4.9 7.3-.8L12 2Z"></path></svg>
+            </div>
+            <p class="quote">"É um sonho montar o quartinho do filho, a gente quer que fique tudo perfeito. Eu amei a cama."</p>
+            <span class="quote-name">Renata Veverka, cliente Pequetitos</span>
+            <div class="hero-actions">
+              <a class="btn btn-primary js-whatsapp" href="https://wa.me/5531997682431?text=Ol%C3%A1%2C%20vim%20pela%20landing%20page%20da%20Pequetitos%20Design%20e%20quero%20ajuda%20para%20montar%20um%20quartinho." target="_blank" rel="noopener noreferrer" data-cta="testimonial_whatsapp">
+                Quero conversar com a Pequetitos
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="cta-title">
+        <div class="container final-inner reveal">
+          <div class="final-copy">
+            <span class="section-kicker">Próximo passo</span>
+            <h2 class="section-title" id="cta-title">Vamos transformar a ideia do quartinho em uma escolha segura?</h2>
+            <p>Conte para a Pequetitos a fase da criança, o espaço e o que você imagina. A equipe ajuda a encontrar uma composição bonita, funcional e feita para durar.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary js-whatsapp" href="https://wa.me/5531997682431?text=Ol%C3%A1%2C%20vim%20pela%20landing%20page%20da%20Pequetitos%20Design%20e%20quero%20ajuda%20para%20montar%20um%20quartinho." target="_blank" rel="noopener noreferrer" data-cta="final_whatsapp">
+                Falar com especialista agora
+              </a>
+            </div>
+            <span class="final-note">Atendimento personalizado em todo o Brasil.</span>
+          </div>
+
+          <figure class="final-visual">
+            <img src="/static/img/pequetitos/familia-pequetitos.jpg" alt="Família reunida em um quarto infantil Pequetitos" loading="lazy">
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-main">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="#inicio" aria-label="Voltar ao início">
+            <img src="/static/img/pequetitos/logo.jpg" alt="Pequetitos Design">
+            <span class="footer-brand-copy">
+              <strong>Pequetitos Design</strong>
+              <span>Móveis infantis autorais</span>
+            </span>
+          </a>
+          <p>Ambientes infantis com design atemporal, segurança e curadoria para cada fase da família.</p>
+        </div>
+
+        <nav class="footer-column" aria-label="Navegação do rodapé">
+          <span class="footer-heading">Navegue</span>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#processo">Como funciona</a>
+          <a href="#ambientes">Ambientes</a>
+        </nav>
+
+        <div class="footer-column">
+          <span class="footer-heading">Contato</span>
+          <a class="js-whatsapp" href="https://wa.me/5531997682431?text=Ol%C3%A1%2C%20vim%20pela%20landing%20page%20da%20Pequetitos%20Design%20e%20quero%20ajuda%20para%20montar%20um%20quartinho." target="_blank" rel="noopener noreferrer" data-cta="footer_whatsapp">WhatsApp: (31) 99768-2431</a>
+          <a href="mailto:contato@pequetitosdesign.com">contato@pequetitosdesign.com</a>
+          <span class="footer-contact-note">Atendimento para todo o Brasil.</span>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 Pequetitos Design.</span>
+        <span>Design infantil com intenção.</span>
+      </div>
+    </footer>
+
+    <a class="float-whatsapp js-whatsapp" href="https://wa.me/5531997682431?text=Ol%C3%A1%2C%20vim%20pela%20landing%20page%20da%20Pequetitos%20Design%20e%20quero%20ajuda%20para%20montar%20um%20quartinho." target="_blank" rel="noopener noreferrer" data-cta="floating_whatsapp" aria-label="Falar com a Pequetitos Design no WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M19.1 4.9A9.8 9.8 0 0 0 3.8 16.7L2.7 21l4.4-1.1A9.8 9.8 0 0 0 21.9 11.5a9.7 9.7 0 0 0-2.8-6.6Zm-7 15a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-2.6.7.7-2.5-.2-.3a8.1 8.1 0 1 1 6.5 3.4Zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2s.9 2.4 1 2.5c.1.2 1.7 2.7 4.2 3.8.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .2-1.1-.1-.1-.2-.1-.4-.2Z"></path>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      var utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+      var params = new URLSearchParams(window.location.search);
+      var utmParts = [];
+
+      utmKeys.forEach(function (key) {
+        var value = params.get(key) || sessionStorage.getItem(key) || "";
+        if (value) {
+          sessionStorage.setItem(key, value);
+          utmParts.push(key + "=" + value);
+        }
+      });
+
+      document.querySelectorAll("[data-cta]").forEach(function (element) {
+        element.addEventListener("click", function () {
+          if (window.trackCTA) {
+            window.trackCTA(element.getAttribute("data-cta"));
+          }
+        });
+      });
+
+      if (utmParts.length) {
+        document.querySelectorAll(".js-whatsapp").forEach(function (link) {
+          try {
+            var url = new URL(link.href);
+            var message = url.searchParams.get("text") || "";
+            url.searchParams.set("text", message + "\n\nOrigem: " + utmParts.join(" | "));
+            link.href = url.toString();
+          } catch (error) {
+            console.warn("UTM no WhatsApp indisponível", error);
+          }
+        });
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll(".reveal").forEach(function (item) {
+        observer.observe(item);
+      });
+    })();
+  </script>
+</body>
+</html>

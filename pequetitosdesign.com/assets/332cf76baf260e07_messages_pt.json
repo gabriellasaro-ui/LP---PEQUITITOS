@@ -1,0 +1,19 @@
+{
+  "CART_ICON_7": "Carrinho",
+  "shoppingCartIcon.designTab.cartIconStyle.iconTextLabel": "Texto do ícone",
+  "sr.CART_WIDGET_BUTTON_TEXT": "Carrinho com {{itemsCount}} itens",
+  "shoppingCartIcon.widgetTitle": "Ícone do carrinho",
+  "shoppingCartIcon.designTab.cartIconStyle.iconTextPlaceholder": "Carrinho",
+  "CART_ICON_3": "CARRINHO",
+  "settings.cart.textTab.addNoteLabel": "Link da observação",
+  "settings.cart.textTab.buttonTextLabel": "Texto do botão",
+  "settings.cart.textTab.continueShoppingLabel": "Link \"Continuar navegando\"",
+  "settings.cart.textTab.instructionsLabel": "Instruções da observação",
+  "CART_ICON_4": "Carrinho",
+  "CART_ICON_5": "Carrinho",
+  "shoppingCartIcon.widget": "Cart Icon",
+  "settings.cart.textTab.disclaimerLabel": "Aviso",
+  "settings.cart.textTab.promoCodeLabel": "Link do código promocional",
+  "settings.cart.textTab.pageTitleLabel": "Título da página",
+  "settings.cart.textTab.emptyCartLabel": "Mensagem de carrinho vazio"
+}
